@@ -1,0 +1,1018 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Global Styling */
+a{
+    text-decoration: none;
+}
+li{
+    list-style:none ;
+}
+h1{
+    font-size: 2.2rem;
+}
+button{
+    padding:10px 30px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+input{
+    padding:10px 30px;
+    outline: none;
+    border-radius: 8px;
+}
+/* Navigation Styling */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw 3vw;
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    z-index: 999;
+}
+nav.active{
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    animation: Down .8s ease;
+}
+@keyframes Down{
+    0%{
+        top: -100%;
+    }
+    100%{
+        top:0;
+    }
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 60px;
+}
+.logo h1{
+    color: rgb(4, 4, 168);
+    margin-left: 10px;
+}
+nav ul{
+    display: flex;
+}
+nav ul li{
+    margin-right: 20px;
+}
+nav ul li a{
+    color: #d3d3d3;
+    font-size: 17px;
+    font-weight: 400;
+}
+nav ul li a.active{
+    color: #0164f9;
+    font-weight: 600;
+}
+nav button{
+    background:#0164f9;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+}
+nav #menu-btn{
+    font-size: 2.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    display: none;
+}
+nav #menu-close{
+    display: none;
+}
+
+
+/* Home Styling */
+#home {
+    width: 100%;
+    padding: 10vw 3vw 3vw 3vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+#home .home-left{
+    width: 45%;
+}
+#home .home-left h1{
+    font-size: 4rem;
+    font-weight: 800;
+}
+#home .home-left p{
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+#home .home-left input{
+    width: 350px;
+    border-radius: 100px;
+    border: 1px solid #d3d3d3;
+}
+#home .home-left button{
+    margin-left: -130px;
+    background-color: #0164f9;
+    color: #FFF;
+    border-radius: 100px;
+    padding: 8px 30px;
+}
+#home .home-right{
+    width: 50%;
+}
+#home .home-right img{
+    width: 100%;
+}
+
+/* Dishes Section Styling */
+#dishes-to-order{
+    width: 100%;
+    text-align: center;
+    padding: 5vw 8vw 2vw 8vw;
+}
+#dishes-to-order h1{
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+#dishes-to-order p{
+    color: #b7b7b7;
+}
+#dishes-to-order .dishes{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-top: 50px;
+    padding: 2vw 3vw;
+    grid-gap: 2rem;
+}
+#dishes-to-order .dishes .dish{
+    padding: 3vw 2vw;
+    border-radius: 12px;
+    /* width: 150px; */
+    height: 200px;
+    cursor: pointer;
+    transition: .3s ease;
+    background: linear-gradient(0deg, #5c5efa 0%, #d5aced 100%);
+}
+#dishes-to-order .dishes .dish img{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.6);
+}
+#dishes-to-order .dishes .dish h3{
+    color: #fff;
+}
+#dishes-to-order .dishes .dish:hover{
+    transform: scale(1.1);
+}
+
+/* Ho to order Section Styling */
+#how-to-order {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 5vw 8vw 4vw 8vw;
+    text-align: center;
+}
+#how-to-order h1,#popular-dishes-to-order h1{
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+#how-to-order p,#popular-dishes-to-order p{
+    color: #b7b7b7;
+    margin-bottom: 20px;
+    width: 60%;
+}
+#how-to-order .order-steps{
+    width: 98%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 2rem;
+}
+#how-to-order .order-steps .order-step{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: rgba(23, 190, 201, 1.0);
+    background: linear-gradient(180deg, rgba(23, 190, 201, 1.0), rgba(3, 251, 163, 1.0));
+    border-radius: 12px;
+    padding: 40px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+#how-to-order .order-steps .order-step:hover{
+    transform: translateY(-5%);
+}
+
+#how-to-order .order-steps .order-step span{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    color: #FFF;
+    font-size: 17px;
+    font-weight: 500;
+    text-align: center;
+    border: 1px dashed #f9004e;
+    border-radius: 50%;
+}
+#how-to-order .order-steps .order-step h2{
+    color: #FFF;
+    font-size: 1.5rem;
+}
+#how-to-order .order-steps img{
+    height: 90px;
+    width: 90px;
+}
+
+/* Popular Dishes */
+#popular-dishes-to-order{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 5vw 2vw 8vw 2vw;
+    text-align: center;
+}
+#popular-dishes-to-order .dishes-to-order{
+    width: 98%;
+    padding: 2vw 3vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2rem;
+    margin-top: 30px;
+}
+#popular-dishes-to-order img{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border: 4px solid #E3E3E3;
+    margin-bottom: 12px;
+    object-fit: cover;
+    background-position: center;
+}
+#popular-dishes-to-order .dishes-to-order .popular-dish{
+    border: 1px solid #d3d3d3;
+    border-radius: 12px;
+    padding: 2vw 5vw;
+    transition: .3s ease;
+}
+.popular-dish:hover{
+    background: linear-gradient(0deg, #5c5efa 0%, #d5aced 100%);
+    border: none;
+    transform: scale(0.99);
+}
+
+.popular-dish:hover h4,
+.popular-dish:hover p .price {
+    color: white;
+}
+
+
+#popular-dishes-to-order .dishes-to-order .popular-dish p{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+#popular-dishes-to-order .dishes-to-order .popular-dish p span:nth-child(1){
+    font-size: 17px;
+    font-weight: 600;
+    color: #000;
+}
+#popular-dishes-to-order .dishes-to-order .popular-dish p span:nth-child(2){
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    font-weight: 500;
+    background: #0164f9;
+    color: #fff;
+}
+.see-menu{
+    background: #0164f9;
+    color: #fff;
+    display: flex;
+    border: 1px solid #0164f9;
+    align-items: center;
+    transition: .3s ease;
+    margin-top: 20px;
+}
+.see-menu ion-icon{
+    font-size: 25px;
+    color: #fff;
+    margin-left: 10px;
+}
+.see-menu:hover{
+    transform: scale(1.1);
+}
+
+
+/* Order Food Section Styling */
+#order-food{
+    padding: 5vw 3vw 4vw 3vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+#order-food .order-left{
+    width: 45%;
+}
+#order-food .order-right{
+    padding: 20px 50px;
+    width: 50%;
+}
+#order-food .order-right h1{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+#order-food .order-right p{
+    font-size: 16px;
+    color: #857c7c;
+}
+#order-food .order-right .order-links{
+    margin:20px 0;
+    gap: 20px;
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+}
+#order-food .order-right .order-links a{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+#order-food .order-right .order-links a h6{
+    width: 60%;
+    margin-left: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+    color: #1c1919;
+}
+#order-food .order-right .order-links a ion-icon{
+    font-size: 25px;
+    transform: rotate(45deg);
+}
+#order-food .order-right .btns{
+    padding: 20px 0;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+#order-food .order-right .btns button{
+    padding: 8px 25px;
+    border-radius: 100px;
+    font-weight: bold;
+    transition: .3s ease;
+}
+#order-food .order-right .btns .choose-a-diet{
+    background: #0164f9;
+    color: #FFF;
+}
+#order-food .order-right .btns .choose-a-diet:hover{
+    color: #0164f9;
+    background: none;
+    border: 1px solid #0164f9;
+}
+#order-food .order-right .btns .what-s-new{
+    border: 1px solid #0164f9;
+    color: #0164f9;
+    background: transparent;
+}
+#order-food .order-right .btns .what-s-new:hover{
+    background: #0164f9;
+    color: #FFF;
+}
+#order-food .order-left img{
+    width: 100%;
+}
+
+
+/* Our App Section Styling */
+#download-our-app{
+    padding: 3vw 5vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+#download-our-app .download-details{
+    width: 50%;
+}
+#download-our-app .download-details h1{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+#download-our-app .download-details p{
+    font-size: 16px;
+    color: #b7b7b7;
+    margin-bottom: 20px;
+}
+#download-our-app .download-details h4{
+    color: rgb(63, 60, 60);
+    margin-bottom: 10px;
+}
+#download-our-app .download-details h4 span{
+    font-size: 15px;
+    width: 12px;
+    height: 12px;
+    padding: 4px;
+    border-radius: 50%;
+    border: 1px dashed red;
+}
+#download-our-app .download-details .store{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+#download-our-app .download-details .store img{
+    width: 130px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+#download-our-app .app-img img{
+    height: 400px;
+    border-radius: 25px;
+    width: 220px;
+}
+
+
+/* Client Section Styling */
+#what-our-client-say{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 3vw 8vw;
+}
+#what-our-client-say img{
+    width: 30%;
+}
+#what-our-client-say .client-div{
+    width: 45%;
+    padding: 30px;
+}
+#what-our-client-say .client-div h1{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+#what-our-client-say .client-div .comment{
+    font-size: 16px;
+    color: #b7b7b7;
+    transition: .3s ease;
+    padding: 3px;
+}
+#what-our-client-say .client-div .client-info{
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+#what-our-client-say .client-div .client-info .single-client{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+#what-our-client-say .client-div .client-info .single-client h4{
+    font-size: 15px;
+    font-weight:600;
+    transition: .3s ease;
+}
+#what-our-client-say .client-div .client-info .single-client .client-profession{
+    transition: .3s ease;
+}
+#what-our-client-say .client-div .client-info .single-client .stars{
+    display: flex;
+    margin-top: 5px;
+}
+#what-our-client-say .client-div .client-info .single-client .stars ion-icon{
+    color: #f9004e;
+}
+#what-our-client-say .client-div .client-info .single-client img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 2px solid #b7b7b7;
+    transition: .3s ease;
+}
+
+#what-our-client-say .client-div .client-info .prev-next{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+#what-our-client-say .client-div .client-info .prev-next ion-icon{
+    cursor: pointer;
+    padding: 5px;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+#what-our-client-say .client-div .client-info .prev-next ion-icon.prev{
+    color: #0164f9;
+    border: 1px solid #0164f9;
+}
+
+#what-our-client-say .client-div .client-info .prev-next ion-icon.next{
+    background: #0164f9;
+    border: 1px solid #0164f9;
+    color: #FFF;
+}
+
+/* Articles And Useful Tips Section Styleing */
+#articles_and_tips{
+    padding: 4vw 8vw;
+    text-align: center;
+}
+#articles_and_tips h1{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+#articles_and_tips .desc{
+    text-align: center;
+    width: 60%;
+    font-size: 16px;
+    color: #b7b7b7;
+    margin: auto;
+}
+#articles_and_tips .articles{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    width: 90%;
+    margin: 2rem auto;
+}
+#articles_and_tips .articles .article {
+    padding: 1em;
+    text-align: start;
+}
+#articles_and_tips .articles .article h4{
+    color: #1c1919;
+    margin-bottom: 10px;
+}
+#articles_and_tips .articles .article p{
+    color: #b7b7b7;
+    margin-bottom: 10px;
+}
+#articles_and_tips .articles .article img{
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+#articles_and_tips .articles .article .readmore{
+    font-size: 17px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+#articles_and_tips .articles .article .readmore span{
+    margin-right: 5px;
+}
+#articles_and_tips .articles .article .readmore .rotate{
+    transform: rotate(-45deg);
+}
+
+#articles_and_tips .see-menu{
+    margin: 20px auto;
+}
+
+/* Newsleter Section Styling */
+#newsletter{
+    width: 100%;
+    min-height: 80vh;
+    background: linear-gradient(rgba(0, 13, 255, 0.2),rgba(79, 111, 255, 0.2)),url("./images/newsletter/naturebg.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#newsletter .subscribe{
+    color: #fff;
+    padding:60px;
+    border-right: 4px dashed #fff;
+    width: 50%;
+}
+#newsletter .subscribe h1{
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+}
+#newsletter .subscribe p{
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+#newsletter .subscribe .form{
+    width: 100%;
+    margin-top: 30px;
+    position: relative;
+}
+#newsletter .subscribe input{
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    border: none;
+    background: #fff;
+    border-radius: 100px;
+    height: 50px;
+}
+#newsletter .subscribe button{
+    position: absolute;
+    right: 10px;
+    top: 3px;
+    color: #FFF;
+    background: #0164f9;
+    display: flex;
+    align-items: center;
+    border-radius: 100px;
+}
+#newsletter .subscribe button span{
+    margin-right: 5px ; 
+}
+#newsletter .subscribe button ion-icon{
+    color: #0164f9;
+    padding: 5px;
+    background: #FFF;
+    border-radius: 50%;
+}
+#newsletter .ready-to-order{
+    padding:35px;
+    width: 50%;
+}
+#newsletter .ready-to-order h2{
+    color: #FFF;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+#newsletter .ready-to-order button{
+    color: #FFF;
+    background: #0164f9;
+    border-radius: 100px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: .3s ease;
+}
+#newsletter .ready-to-order button:hover{
+    border: 2px solid #fff;
+    background: transparent;
+}
+
+
+
+/* Footer Section Styling */
+footer{
+    padding: 6vw 8vw;
+}
+.footer-top{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px 10px;
+}
+
+.footer-top .foo-logo{
+    /* padding: 0 50px; */
+    width: 35%;
+}
+.footer-top .foo-logo p{
+    margin-top: 10px;
+    color: #b7b7b7;
+}
+.footer-top .foo-links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+.footer-top  h3{
+    margin-bottom: 25px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.footer-top li a{
+    cursor: pointer;
+    margin-bottom: 10px;
+    color: #b7b7b7;
+    transition: .3s ease;
+}
+.footer-top  li a:hover{
+    color: #0164f9;
+}
+
+.footer-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 60px;
+}
+.footer-bottom p{
+    font-size: 16px;
+    color: #b7b7b7;
+}
+.footer-bottom  .social-links{
+    padding:10px 20px;
+    display: flex;
+}
+.footer-bottom  .social-links ion-icon{
+    cursor: pointer;
+    font-size: 25px;
+    margin-right: 7px;
+    padding: 5px;
+    border: 1px solid #0164f9;
+    border-radius: 6px;
+    color: #0164f9;
+    transition: .3s ease;
+}
+.footer-bottom  .social-links ion-icon:hover{
+    color:#fff ;
+    background: #0164f9;
+}
+
+
+
+
+
+
+/* Media Screens Responsive */
+
+@media (max-width: 770px){
+    nav {
+        padding: 1vw 4vw;
+    }
+    nav ul{
+        display: none;
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: -250px;
+        width: 250px;
+        background: rgba(17, 20, 104, 0.45);
+        backdrop-filter: blur(4px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        height: 100vh;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-top: 30px;
+        transition: .3s ease;
+    }
+    nav ul.active{
+        right: 0;
+    }
+    nav  ul li{
+        padding: 20px 0 20px 40px;
+        margin-left: 0;
+    }
+    nav  ul li a{
+        color: #fff;
+    }
+    
+    nav .logo img {
+        width: 58px;
+    }
+    nav .logo h1 {
+        font-size: 20px;
+        margin-left: 5px;
+    }
+    nav #menu-btn{
+        display: initial;
+    }
+    nav #menu-close{
+        display: initial;
+        color: #fff;
+        font-size: 2.5rem;
+        padding: 30px 0 20px 20px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    /* Home Styling  */
+    #home .home-left h1 {
+        font-size: 2rem;
+        font-weight: 800;
+    }
+    #home .home-left input {
+        width: 96%;
+    }
+
+    /* Dishes Section */
+    #dishes-to-order .dishes {
+        grid-gap: 1rem;
+        margin-top: 44px;
+    }
+    /*Order Food Section*/
+
+    #order-food {
+        padding: 5vw  1vw 4vw 3vw;
+        display: flex;
+        flex-direction: column;
+    }
+    #order-food .order-right {
+        padding: 21px 41px;
+        width: 100%;
+    }
+    #order-food .order-left {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #how-to-order h1, #popular-dishes-to-order h1 {
+        font-size: 2.5rem;
+    }
+    #popular-dishes-to-order p {
+        width: 100%;
+    }
+    /* Download Our App */
+    #download-our-app {
+        padding: 3vw;
+    }
+    #download-our-app .download-details h1 {
+        font-size: 2rem;
+        margin-bottom: 12px;
+    }
+    #download-our-app .app-img img {
+        height: 474px;
+        border-radius: 25px;
+        width: 236px;
+    }
+
+    /*What out client Say About Us*/
+    #what-our-client-say .client-div {
+        width: 100%;
+        padding: 45px;
+    }
+    #what-our-client-say img {
+        width: 0;
+    }
+    #what-our-client-say {
+        padding: 3vw 2vw;
+    }
+    #what-our-client-say .comment{
+        text-align: justify;
+    }
+
+
+    /*Newsletter*/
+    #newsletter .subscribe {
+        padding: 13px;
+        width: 60%;
+    }
+    #newsletter .ready-to-order {
+        width: 35%;
+    }
+
+
+    /* Footer  */
+    footer {
+        padding: 6vw 4vw;
+    }
+    .footer-top .foo-logo {
+        margin-bottom: 30px;
+        width: 100%;
+    }
+    .footer-top .foo-links {
+        gap: 50px;
+    }
+}
+
+@media (max-width: 475px){
+    nav {
+        padding: 1vw 2vw;
+    }
+    nav .logo h1 {
+        font-size: 17px;
+    }
+    nav button {
+        padding: 10px 15px;
+    }
+    #home {
+        flex-direction: column;
+        padding:20px 30px;
+    }
+    #home .home-left {
+        width: 100%;
+        padding: 30px 10px;
+    }
+    #home .home-right {
+        width: 100%;
+    }
+
+    #dishes-to-order {
+        padding: 16px;
+    }
+    #dishes-to-order .dishes {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(162px, 1fr));
+        /* margin-top: 50px;
+        padding: 2vw 3vw; */
+        grid-gap: 1.5rem;
+    }
+    #dishes-to-order h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+    #dishes-to-order .dishes .dish {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+    }
+    #dishes-to-order .dishes .dish:hover {
+        transform: scale(0.99);
+    }
+    #dishes-to-order .dishes .dish h3 {
+        margin-top: 10px;
+    }
+    #order-food .order-right {
+        padding:20px 15px;
+    }
+    #order-food .order-right .order-links {
+        margin: 38px 0;
+        gap: 41px;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    #order-food .order-right h1 {
+        font-size: 2rem;
+    }
+
+    #download-our-app {
+        flex-direction: column;
+    }
+    #download-our-app .download-details {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    #download-our-app .download-details .store img {
+        width: 150px;
+    }
+    #download-our-app .download-details h4 {
+        margin: 17px 0;
+    }
+    #download-our-app .app-img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    #download-our-app .app-img img{
+        width: 60%;
+    } 
+    #what-our-client-say .client-div {
+        padding: 20px;
+    }
+    #articles_and_tips{
+        padding: 20px;
+        text-align: start;
+    }
+    #articles_and_tips .desc{
+        text-align: justify;
+        width: 100%;
+    }
+    #articles_and_tips .articles {
+        width: 100%;
+        margin: 1rem auto;
+    }
+    #articles_and_tips .articles .article {
+        padding: 0;
+        margin-bottom: 30px;
+    }
+    #newsletter{
+        flex-direction: column;
+    }
+    #newsletter .subscribe {
+        padding: 18px;
+        width: 100%;
+        border: none;
+    }
+    #newsletter .subscribe input {
+        width: 104%;
+    }
+    #newsletter .subscribe button {
+        right: -9px;
+    }
+    #newsletter .ready-to-order {
+        width: 100%;
+        padding: 18px;
+    }
+    .footer-top .foo-links {
+        justify-content: flex-start;
+        gap: 54px;
+    }
+    .footer-bottom {
+        padding: 0px;
+    }
+}
+
