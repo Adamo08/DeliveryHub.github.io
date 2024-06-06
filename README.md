@@ -1,5 +1,11 @@
 # DeliveryHub - Responsive Food Delivery Website
 
+Welcome to the DeliveryHub project!
+
+You can view the GitHub Pages site for this repository here:
+[DeliveryHub GitHub Pages](https://adamo08.github.io/DeliveryHub.github.io)
+
+
 ## Overview
 
 The DeliveryHub website provides users with an intuitive and enjoyable food delivery experience that's responsive and visually appealing. The repository contains the HTML, CSS, and JavaScript source code for the website.
