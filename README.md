@@ -30,7 +30,7 @@ DeliveryHub is more than just a website; it's a platform crafted to streamline t
 
 To experience DeliveryHub or contribute to its development, follow these simple steps:
 
-1. **Clone the Repository**: Use the command `git clone <repository-url>` to clone the repository to your local machine.
+1. **Clone the Repository**: Use the command `git clone https://github.com/Adamo08/DeliveryHub.github.io.git` to clone the repository to your local machine.
 2. **Open the Website**: Launch the `index.html` file in your preferred web browser.
 
 ## Sections
